@@ -2,6 +2,7 @@
    CHRIST OR NOTHING - PROFESSIONAL BLACK THEME
    Scroll-Away Header & Clean Design
    MOBILE: 2 PRODUCTS SIDE BY SIDE (LEFT & RIGHT)
+   CART ICON ALIGNED IN RIBBON WITH NAVIGATION
 ============================================ */
 
 :root {
@@ -107,6 +108,13 @@ header.header-hidden {
     opacity: 0.8;
 }
 
+/* Navigation and Cart Container */
+.nav-and-cart {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 .nav-menu {
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +158,8 @@ header.header-hidden {
     font-size: 1.4rem;
     color: var(--text-primary);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .cart-icon:hover {
@@ -415,83 +425,128 @@ header.header-hidden {
         padding: 0 12px;
     }
     
-    .product-info {
-        padding: 14px 10px;
-    }
-    
-    .product-name {
-        font-size: 0.8rem;
-        line-height: 1.3;
-    }
-    
-    .product-price {
-        font-size: 0.9rem;
-        margin: 6px 0;
-    }
-    
-    .product-desc {
-        font-size: 0.65rem;
-        display: none;
-    }
-    
-    .color-options {
-        gap: 8px;
-        margin-top: 10px;
-        padding-top: 8px;
-    }
-    
-    .color-swatch {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .type-options {
-        gap: 8px;
-        margin: 8px 0;
-    }
-    
-    .type-btn {
-        padding: 4px 12px;
-        font-size: 0.6rem;
-    }
-    
-    .carousel {
-        padding: 12px;
-    }
-    
-    .carousel-btn {
-        padding: 4px 8px;
-        font-size: 0.8rem;
-    }
-    
-    .carousel-btn.prev { left: 8px; }
-    .carousel-btn.next { right: 8px; }
-    
-    .section {
-        margin: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 28px;
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
+    /* Header mobile layout - cart icon in line with nav */
     .navbar {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
+        padding: 12px 0;
+    }
+    
+    .logo-area {
+        justify-content: center;
+    }
+    
+    .nav-and-cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
     }
     
     .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 12px;
+        flex: 1;
+    }
+    
+    .nav-menu li a {
+        font-size: 0.7rem;
+    }
+    
+    .cart-icon {
+        flex-shrink: 0;
+        font-size: 1.3rem;
     }
     
     .brand-name {
         font-size: 1rem;
+    }
+    
+    .product-info {
+        padding: 12px 8px;
+    }
+    
+    .product-name {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .product-price {
+        font-size: 0.85rem;
+        margin: 4px 0;
+    }
+    
+    .product-desc {
+        font-size: 0.6rem;
+        display: none;
+    }
+    
+    .color-options {
+        gap: 6px;
+        margin-top: 8px;
+        padding-top: 6px;
+    }
+    
+    .color-swatch {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .type-options {
+        gap: 6px;
+        margin: 6px 0;
+    }
+    
+    .type-btn {
+        padding: 4px 8px;
+        font-size: 0.55rem;
+    }
+    
+    .carousel {
+        padding: 10px;
+    }
+    
+    .carousel-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .carousel-btn.prev { left: 6px; }
+    .carousel-btn.next { right: 6px; }
+    
+    .section {
+        margin: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 100px 0 50px;
+        min-height: 70vh;
+    }
+    
+    .hero-tagline {
+        font-size: 0.7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 24px;
+        font-size: 0.75rem;
     }
 }
 
@@ -499,34 +554,59 @@ header.header-hidden {
 @media (max-width: 480px) {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 10px;
     }
     
     .product-info {
-        padding: 10px 8px;
+        padding: 8px 6px;
     }
     
     .product-name {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
     
     .product-price {
-        font-size: 0.8rem;
-        margin: 4px 0;
+        font-size: 0.75rem;
+        margin: 3px 0;
     }
     
     .color-swatch {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
     
     .type-btn {
-        padding: 3px 8px;
-        font-size: 0.55rem;
+        padding: 2px 6px;
+        font-size: 0.5rem;
     }
     
     .carousel {
-        padding: 8px;
+        padding: 6px;
+    }
+    
+    .nav-menu li a {
+        font-size: 0.6rem;
+    }
+    
+    .cart-icon {
+        font-size: 1.2rem;
+    }
+    
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 0.55rem;
+        top: -8px;
+        right: -10px;
+    }
+    
+    .brand-name {
+        font-size: 0.85rem;
+    }
+    
+    .logo-img {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -1201,5 +1281,13 @@ footer a {
 @media (max-width: 480px) {
     .recommendations-grid {
         gap: 12px;
+    }
+    
+    .recommendation-card h4 {
+        font-size: 0.65rem;
+    }
+    
+    .recommendation-card p {
+        font-size: 0.7rem;
     }
 }
